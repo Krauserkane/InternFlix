@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+:root{
+    --nav-width: 100%;
+    --nav-height: 70px;
+    --item-height: 50px;
+    --nav-item-color: rgb(84, 206, 243);
+    --dashboard-color: rgb(245, 176, 87);
+    --dashboard-height: 250px;
+    --dashboard-items-width: calc(48/100*var(--nav-width));
+    --apply-buttons-color: rgb(101, 64, 238);
+    --main-content-color: rgb(163, 211, 131);
+    --main-content-item-width: calc(48/100*var(--nav-width))
+}
+
+/* ################# NAVBAR AND NAV ITEMS ################# */
+/* .navbar{
+    width: var(--nav-width);
+    background-color: rgb(145, 84, 243);
+    height: var(--nav-height);
+}
+.list{
+    width: 100%;
+    height: var(--nav-height);
+}
+.nav__list_items{
+    display: flex;
+    width: fit-content;
+    height: var(--nav-height);
+    float: right;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.nav__items{
+    background-color: var(--nav-item-color);
+    text-decoration: none;
+    display: inline;
+    width: 100px;
+    height: var(--item-height);
+    border-radius: 10px;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.nav__items:hover{
+    cursor: pointer;
+}
+
+#home,
+#logo{
+    float: left;
+} */
+
+.logo{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+li, a, button{
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    position: sticky;
+    top: 0;
+    height: 75px;
+}
+
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: #0088a9;
+}
+button{
+    padding: 9px 25px;
+    margin-left: 20px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+
+/* ################# USER DASHBOARD ################# */
+.dashboard__container{
+    display: flex;
+    justify-content: center;
+    background-color: var(--dashboard-color);
+    height: var(--dashboard-height);
+}
+#dashboard__title{
+    padding-top: 10px;
+    text-align: center;
+    height: fit-content;
+    background-color: var(--dashboard-color);
+}
+.applications,
+.your__results{
+    text-align: center;
+    background-color: white;
+    margin-top: 5px;
+    height: calc(90/100*var(--dashboard-height));
+    width: var(--dashboard-items-width);
+    border-radius: 10px;
+}
+.applications{
+    margin-right: 30px;
+}
+
+/* ################# APPLY FOR JOB/INTERNSHIP BUTTONS ################# */
+.apply__buttons{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-content-color);
+}
+#internship,
+#job{
+    border: 1px solid black;
+    background-color: var(--apply-buttons-color);
+    border-radius: 10px;
+    width: 200px;
+    height: 70px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+#internship{
+    margin-right: 1000px;
+}
+
+
+/* ################# MAIN CONTENT ################# */
+.main__content__container{
+    background-color: var(--main-content-color);
+    width: var(--nav-width);
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+/* ################# HOW TO INFO #################  || ################# ANNOUNCEMENTS/EVENTS ################# */
+.how__to__apply,
+.announcements{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: var(--main-content-item-width);
+    text-align: center;
+    height: 400px;
+}
+.how__to__apply{
+    text-align: center;
+    margin-right: 30px;
+}
+.how__to__title{
+    text-align: center;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: fit-content;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(115, 115, 248);
+}
+.carousel{
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: 98%;
+    height: 200px;
+    border: 1px solid black;
+}
+.text__content{
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: 98%;
+    border: 1px solid black;
+    height: 100px;
+}
+
+.events__title{
+    text-align: center;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: fit-content;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(115, 115, 248);
+}
+
+/* ################# FOOTER (Links, git,linkedin,etc) ################# */
+.footer__container{
+    background-color: gray;
+    padding-top: 10px;
+}
+.links{
+    width: 98%;
+    margin: auto;
+    height: 100px;
+    border: 1px solid black;
+}
+.profile__links{
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+    height: 100px;
+    border: 1px solid black;
+}

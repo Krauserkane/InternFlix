@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ###################### BACKGROUND SVGs ###################### */
+.background__img{
+    position: fixed;
+    height: 50%;
+    top: 0;
+    margin: auto;
+    margin-top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.img__2{
+    position: fixed;
+    height: 50%;
+    bottom: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+.img__2__top{
+    display: none;
+    position: fixed;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    height: 16%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ###################### LOGIN BLOCK ###################### */
+form{
+    width: 300px;
+}
+.login__container{
+    margin-top: 8rem;
+    position: absolute;
+    padding: 1.5rem;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(15%,-80%);
+    background-color:whitesmoke;
+    width: 400px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.i{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.i i{
+    color: #d9d9d9;
+    transition: .3s;
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #2d277e;
+    transition: .3s;
+}
+
+.input-div:after{
+    right: 50%;
+}
+.input-div:before{
+    left: 50%;
+}
+.input-div.focus .i i{
+    color: #2d277e;
+}
+.input-div.focus div label{
+    top: -5px;
+    font-size: 15px;
+}
+.input-div.focus:after, .input-div.focus:before{
+    width: 50%;
+}
+.input-div.one{
+    margin-top: 0;
+}
+.input-div.two{
+    margin-bottom: 4px;
+}
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+.input-div > div label{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+}
+.input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #2d277e,#6f68da,#2d277e);
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    text-transform: uppercase;
+    background-size: 200%;
+    transition: .5s;
+}
+.btn:hover{
+    background-position: right;
+}
+
+h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.login__btn{
+    border: none;
+    background-color: #5a189a;
+    border-radius: 50px;
+    width: 100px;
+    height: 40px;
+}
+
+.login__btn a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .login__container{
+        transform: translate(-50%,-60%);
+        grid-gap: 5rem;
+    }
+    .background__img{
+        display: none;
+    }
+
+    .img__2{
+        height: 16%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .img__2__top{
+        display: block;
+        height: 16%;
+        width: 100%;
+        object-fit: cover;
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    form{
+        width: 290px;
+    }
+    form h1{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+}
+
+.red-color{
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1.875rem;
+}
